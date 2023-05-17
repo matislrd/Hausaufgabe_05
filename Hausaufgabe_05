@@ -17,18 +17,31 @@ mix = [51, 0, "Q", "LISTE", 4.3, {"null" : 0, "eins" : 1, "zwei" : 2}, -1, "Tupe
 
 # START TODO ###################
 
-#Integer
-integers = []
+ints = []
+floats = []
+strings = []
+dicts = []
+doubles = []
 for element in mix:
     if type(element) == int:
-        integers += [element]
-
-print("ints == ", integers)
-
-     
-
-
+        ints += [element]
+    elif type(element) == float:
+        floats += [element]
+    elif type(element) == str:
+        strings += [element]
+    elif type(element) == dict:
+        dicts += [element]
+    elif type(element) == bool:
+        break
 
 # END TODO #####################
+# Ausgaben der Listen
+print("Sortierte Listen: ")
+print(ints)
+print(doubles)
+print(strings)
+print(dicts)
 
+# Ausgabe der Summe von allen eingelesenen Zahlen
+print(summe)
 
